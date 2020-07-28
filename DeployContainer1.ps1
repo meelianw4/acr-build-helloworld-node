@@ -16,7 +16,7 @@ $dockerFilename = "Dockerfile"
 az acr task create `
     --registry $ACR_NAME `
     --name $containerName  `
-    --image helloworld:{{.Run.ID}} `
+    --image helloworld:v1 `
     --context https://github.com/$GIT_USER/acr-build-helloworld-node.git `
     --file $dockerFilename `
     --git-access-token $GIT_PAT
